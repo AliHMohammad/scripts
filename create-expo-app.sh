@@ -9,7 +9,7 @@ echo Project name?:
 read name
 echo 'Template? (default, blank, blank-typescript)':
 read template
-echo Directory?
+echo Relative path?
 read dir
 
 cd $dir
@@ -29,21 +29,11 @@ npx create-expo-app $name --template $template
 
 cd ./$name
 
-npm update
 npm i -g expo-cli
-
-cp app.json app.json.tmp &&
-jq '.expo.web += {"bundler": "metro"}' app.json.tmp >app.json &&
-rm app.json.tmp
-
-npx expo install react-native-web@~0.19.6 react-dom@18.2.0
-
+npx expo install react-dom@18.2.0 react-native-web @expo/metro-runtime
 
 echo =======================================
+echo =================DONE!=================
 echo =======================================
-
-echo DONE!
-echo cd to ./$name and run 'npx expo' to start your application
-
-echo =======================================
-echo =======================================
+echo 
+echo cd to $PWD and run 'npx expo start':
