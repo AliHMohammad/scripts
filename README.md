@@ -1,7 +1,7 @@
 # Scripts
 
 
-### create-expo-app.sh
+## create-expo-app.sh
 
 Used to create a React Native expo app.
 
