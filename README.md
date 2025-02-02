@@ -9,3 +9,4 @@ When running the script you must specify the following:
 - Project name
 - Template (default, blank, typescript-blank)
 - Directory
+
